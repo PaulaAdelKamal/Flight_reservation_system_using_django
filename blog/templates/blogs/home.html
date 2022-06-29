@@ -1,0 +1,16 @@
+{% extends "blogs/Base.html" %}
+{% block content %}
+    {% for flight in flights %}
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                </div>
+                <h3 class="text-muted">from: {{ flight.source.capitalize }} </h3>
+                <h3 class="text-muted">to: {{ flight.To.capitalize }}</h3>
+                <h4><a class="article-title" >{{ flight.check_in_date }}</a></h4>
+                <p class="article-content">{{ flight.check_out_date }}</p>
+                <p class="article-content">Number of tickets: {{ flight.plane.number_of_sets }}</p>
+            </div>
+        </article>
+    {% endfor %}
+{% endblock content %}

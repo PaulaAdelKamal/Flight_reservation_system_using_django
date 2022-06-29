@@ -1,0 +1,8 @@
+{% extends "blogs/Base.html" %}
+{% block content %}
+    <h1>Choose class and pay</h1>
+<form action="" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Create"/>
+</form>
+{% endblock content %}
